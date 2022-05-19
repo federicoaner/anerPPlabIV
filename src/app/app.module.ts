@@ -17,6 +17,11 @@ import { AltaProductoComponent } from './componentes/alta-producto/alta-producto
 import { ProductoDetalleComponent } from './componentes/producto-detalle/producto-detalle.component';
 import { ProductoListadoComponent } from './componentes/producto-listado/producto-listado.component';
 import { ProductoPaisComponent } from './componentes/producto-pais/producto-pais.component';
+import { AbmContainerComponent } from './componentes/abm-container/abm-container.component';
+import { AltaContainerComponent } from './componentes/alta-container/alta-container.component';
+import { ContainerListadoComponent } from './componentes/container-listado/container-listado.component';
+import { ModificarContainerComponent } from './componentes/modificar-container/modificar-container.component';
+import { BorrarContainerComponent } from './componentes/borrar-container/borrar-container.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +34,12 @@ import { ProductoPaisComponent } from './componentes/producto-pais/producto-pais
     AltaProductoComponent,
     ProductoDetalleComponent,
     ProductoListadoComponent,
-    ProductoPaisComponent
+    ProductoPaisComponent,
+    AbmContainerComponent,
+    AltaContainerComponent,
+    ContainerListadoComponent,
+    ModificarContainerComponent,
+    BorrarContainerComponent
   ],
   imports: [
     BrowserModule,

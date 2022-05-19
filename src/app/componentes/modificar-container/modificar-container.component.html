@@ -1,0 +1,70 @@
+<body class="bg-light">
+    <div class="container">
+ 
+       
+
+  <div class="row">
+   
+
+    <div class="col-md-8 order-md-1">
+      <h4 class="mb-3"></h4>
+      <form class="needs-validation" novalidate [formGroup]="forma"  (ngSubmit)="agregarContainer()">
+        <div class="row">
+
+            <!--
+          <div class="col-md-6 mb-3">
+            <label for="firstName">codigo</label>
+            
+            <input type="text" class="form-control" id="codigo" placeholder="" value="" required formControlName="codigo">
+            <small class="invalid"
+              *ngIf="forma.controls['codigo'].errors?.['required'] && forma.controls['codigo'].touched">El codigo es requerido  
+            </small>
+            
+           
+          </div>
+          -->
+
+
+          <div class="">
+            <label for="lastName">Marca</label>
+            <input type="text" class="form-control" id="marca" placeholder="" value="" required formControlName="marca">
+            <small class="invalid"
+            *ngIf="forma.controls['marca'].errors?.['required'] && forma.controls['marca'].touched">El marca es requerido
+            </small> 
+          </div>
+
+          <div class="">
+            <label for="lastName">capacidad</label>
+            <input type="text" class="form-control" id="capacidad" placeholder="" value="" required formControlName="capacidad">
+            <small class="invalid"
+            *ngIf="forma.controls['capacidad'].errors?.['required'] && forma.controls['capacidad'].touched">El capacidad es requerido
+            </small> 
+          </div>
+         
+          
+
+         
+        
+        </div>
+
+     
+      
+
+
+      
+
+        
+        <hr class="mb-4">
+        <button type="submit" class="btn btn-primary btn-block" 
+        [disabled]="forma.invalid">
+          Aceptar
+        </button>
+      
+      </form>
+    </div>
+  </div>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+        <script src=""></script></body>

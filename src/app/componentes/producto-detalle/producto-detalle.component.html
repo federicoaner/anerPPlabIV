@@ -11,7 +11,7 @@
       
           <div class="p-5 mb-4 bg-light rounded-3">
             <div class="container-fluid py-5">
-              <h1 class="display-5 fw-bold">Listado Repartidores</h1>
+              <h1 class="display-5 fw-bold">Listado Productos</h1>
              <!-- <app-repartidor-listado (repartidorOutput)="recibirRepartidor($event)" ></app-repartidor-listado> -->
                 <app-producto-listado (productoOutput)="recibirProducto($event)">  </app-producto-listado>
             </div>
@@ -32,13 +32,14 @@
                           
                           <div class="card-body">
                            
-                            <p class="card-text" >Descripcom {{unProducto.descripcion}} </p>
-                            <p class="card-text" >precio {{unProducto.precio}}</p>
-                            <p class="card-text"> Stok {{unProducto.stock}} </p>
-                            <p class="card-text"> Pais {{unProducto.pais}} </p>
-                            <p class="card-text"> Comestible {{unProducto.comestible}} </p>
+                         <h3>   <p class="card-text" > {{unProducto.descripcion}} </p> </h3>
+                         <br>
+                            <p class="card-text" >Precio: {{unProducto.precio}}</p>
+                            <p class="card-text"> Stock:  {{unProducto.stock}} </p>
+                            <p class="card-text"> Pais: {{unProducto.pais}} </p>
+                            <p class="card-text"> Comestible: {{unProducto.comestible}} </p>
                            
-                            <a href="#" class="btn btn-danger">Borrar</a>
+                            
                           </div>
                         </div>
                     </div>

@@ -1,0 +1,18 @@
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+            <th>Codigo</th>
+            <th>Marca</th>
+            <th>Capacidad</th>
+           
+        </thead>
+        <tbody>
+        <tr *ngFor="let containers of listadoContainers | async " (click)="enviarPedido(containers)">
+        <td>{{containers.codigo}}</td>
+        <td>{{containers.marca}}</td>
+        <td>{{containers.capacidad}}</td>
+       
+        </tr>
+        </tbody>
+        </table>
+    </div>
