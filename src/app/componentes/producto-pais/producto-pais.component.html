@@ -1,0 +1,15 @@
+<ul class="list-group mb-3" *ngIf="this.productoElegido != null">
+    <div *ngFor="let item of paises">
+        <li class="list-group-item d-flex justify-content-between lh-condensed" *ngIf="item.name == this.productoElegido.pais">
+            <div>
+              <h6 class="my-0">{{item.name}}</h6>
+              <h6 class="my-0">POBLACION : {{item.population}}</h6>
+              <h6 class="my-0">REGION : {{item.region}}</h6>
+              <h6 class="my-0">CAPITAL : {{item.capital}}</h6>
+            </div>
+            <div>
+              <img [src]="item.flag" style="width: 50px; height: 50px">
+            </div>
+          </li>
+    </div>
+</ul>

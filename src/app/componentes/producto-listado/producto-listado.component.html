@@ -1,0 +1,43 @@
+
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+            <th>CODIGO</th>
+            <th>DESCRIPCION</th>
+            <th>PRECIO</th>
+            
+            <th>STOCK</th>
+            <th>PAIS</th>
+            <th>COMESTIBLE</th>
+            
+        </thead>
+        <tbody>
+        <tr *ngFor="let producto of listadoProductos | async " (click)="enviarProducto(producto)">
+        <td>{{producto.codigo}}</td>
+        <td>{{producto.descripcion}}</td>
+        <td>{{producto.precio}}</td>
+      
+        <td>{{producto.stock}}</td>
+        <td>{{producto.pais}}</td>
+        <td>{{producto.comestible}}</td>
+       
+        </tr>
+        </tbody>
+        </table>
+    </div>
+
+    
+  <h4 class="d-flex justify-content-between align-items-center mb-3" *ngIf="listadoProductos != null">
+  
+</h4> 
+
+<!--
+<ul class="list-group mb-3">
+    <li class="list-group-item d-flex justify-content-between" *ngFor="let productos of listadoProductos | async"
+      (click)="enviarProducto(productos)">
+        <div>
+            <h6 class="text-info"> {{productos.codigo}}  {{productos.descripcion}}  {{productos.precio}} {{productos.stock}}   </h6>
+        </div>
+    </li>
+</ul>
+-->

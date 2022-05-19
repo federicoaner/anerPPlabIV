@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { Producto } from '../clases/producto';
 
 
 @Injectable({
@@ -7,15 +8,15 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 })
 export class FirestoreService {
 
-  productoCollectio:any;
+  productoColection:any;
 
   producto:any;
 
 
   constructor(private firestore:AngularFirestore) {
 
-    this.productoCollectio=this.firestore.collection('producto');
-    this.producto=this.productoCollectio.valueChanges();
+    this.productoColection=this.firestore.collection<Producto>('producto');
+    this.producto=this.productoColection.valueChanges();
    }
 
 
@@ -26,7 +27,7 @@ export class FirestoreService {
     return this.producto;
    }
 
-   agregarAlgo(object:any){
+   agregarAlgo(object:Producto){
 
     this.firestore.collection('producto').add(object);
    }

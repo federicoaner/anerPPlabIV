@@ -14,6 +14,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { TablaPaisesComponent } from './componentes/tabla-paises/tabla-paises.component';
 import { AltaAlgoComponent } from './componentes/alta-algo/alta-algo.component';
 import { AltaProductoComponent } from './componentes/alta-producto/alta-producto.component';
+import { ProductoDetalleComponent } from './componentes/producto-detalle/producto-detalle.component';
+import { ProductoListadoComponent } from './componentes/producto-listado/producto-listado.component';
+import { ProductoPaisComponent } from './componentes/producto-pais/producto-pais.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { AltaProductoComponent } from './componentes/alta-producto/alta-producto
     PruebaSubirComponent,
     TablaPaisesComponent,
     AltaAlgoComponent,
-    AltaProductoComponent
+    AltaProductoComponent,
+    ProductoDetalleComponent,
+    ProductoListadoComponent,
+    ProductoPaisComponent
   ],
   imports: [
     BrowserModule,
