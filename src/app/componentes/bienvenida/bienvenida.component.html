@@ -1,0 +1,63 @@
+<main>
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="card-header">
+            <h4>Datos</h4>            
+        </div>
+      <div class="card-body">
+          <div class="container">
+              <div *ngIf='miGit != null'>
+                <h1>{{miGit}}</h1>
+                <img src="{{miGit.avatar_url}}">
+            </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+  
+    <div class="container marketing">
+        
+        <div *ngIf="this.usuario.logged" class="btnloguearse">
+            <button class="btn-danger"  (click)="Logout()" >Desloguearse</button>
+            
+        </div>
+        
+      <!-- Three columns of text below the carousel -->
+      <div class="row" >
+        <div class="col-lg-3">
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+          <!-- <h2>Alta repartidor</h2> -->
+          <h2></h2>
+          <p><a class="btn btn-outline-primary" routerLink="alta-repartidor">Alta </a></p>
+        </div>
+ 
+        <div class="col-lg-3">
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+          <!-- <h2>Detalle </h2> -->
+          <h2></h2>
+          <p><a class="btn btn-outline-secondary" routerLink="repartidor-detalle">Detalle</a></p>
+        </div>
+ 
+        <div class="col-lg-3" >
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+          <h2></h2>
+          <p><a class="btn btn-outline-secondary" routerLink="sale-delivery">otro</a></p>
+        </div><!-- /.col-lg-4 -->
+ 
+        <div class="col-lg-3">
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+          <h2></h2>
+          <p><a class="btn btn-outline-secondary" routerLink="/prueba">prueba</a></p>
+        </div><!-- /.col-lg-4 -->
+ 
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  
+  
+    <!-- FOOTER -->
+    <footer class="container">
+      <p>2022 Federico Aner</p>
+    </footer>
+  </main>
