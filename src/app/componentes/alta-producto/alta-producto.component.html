@@ -1,0 +1,135 @@
+<body class="bg-light">
+    <div class="container">
+ 
+        <br><br>
+        <h1>ALTA PRODUCTO</h1>
+        <br><br>
+
+  <div class="row">
+    <div class="col-md-4 order-md-2 mb-4">
+      <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted">Paises</span>
+        <span class="badge badge-secondary badge-pill"></span>
+      </h4>
+      <ul class="list-group mb-3">
+
+        <app-tabla-paises (paisOutput)="recibirPais($event)"></app-tabla-paises>
+    
+     
+      </ul>
+
+     
+
+    
+    </div>
+
+    <div class="col-md-8 order-md-1">
+      <h4 class="mb-3">Billing address</h4>
+      <form class="needs-validation" novalidate [formGroup]="forma"  (ngSubmit)="agregarProducto()">
+        <div class="row">
+         
+         
+            <div class="col-md-6 mb-3">
+            <label for="firstName">Codigo</label>
+            
+            <input type="text" class="form-control" id="codigo" placeholder="" value="" required formControlName="codigo">
+            <small class="invalid"
+              *ngIf="forma.controls['codigo'].errors?.['required'] && forma.controls['codigo'].touched">El codigo es requerido  
+            </small>
+            
+           
+          </div>
+
+
+          <div class="">
+            <label for="lastName">Descripcion</label>
+            <input type="text" class="form-control" id="descripcion" placeholder="" value="" required formControlName="descripcion">
+            <small class="invalid"
+            *ngIf="forma.controls['descripcion'].errors?.['required'] && forma.controls['descripcion'].touched">El descripcion es requerido
+            </small> 
+          </div>
+
+          <div class="">
+            <label for="lastName">Precio</label>
+            <input type="text" class="form-control" id="precio" placeholder="" value="" required formControlName="precio">
+            <small class="invalid"
+            *ngIf="forma.controls['precio'].errors?.['required'] && forma.controls['precio'].touched">El precio es requerido
+            </small> 
+          </div>
+
+          <div class="">
+            <label for="lastName">stock</label>
+            <input type="text" class="form-control" id="stock" placeholder="" value="" required formControlName="stock">
+            <small class="invalid"
+            *ngIf="forma.controls['stock'].errors?.['required'] && forma.controls['stock'].touched">El stock es requerido
+            </small> 
+          </div>
+
+          <div class="mb-3">
+            <label for="address2">Pais <span class="text-muted"></span></label>
+            <input type="text" class="form-control" id="address2" placeholder=""   formControlName="pais">   <!--  [(ngModel)]="nombrePais" [ngModelOptions]="{standalone: true}" -->
+          </div>
+
+          
+          <div class="col-mb-3">
+            <label for="lastName" class="form-label">Comestible</label>
+            <select class="form-control" formControlName='comestible' required>
+                <option value="true" selected>Si</option>
+                <option value="false">no</option>
+              
+               
+            </select>
+            <small class="invalid"
+            *ngIf="forma.controls['comestible'].errors?.['required'] && forma.controls['comestible'].touched">Comestible es Requerido
+            </small> 
+          </div>
+
+         
+
+      
+
+      
+
+   
+          
+
+
+          
+         
+
+          
+        
+        
+        
+        
+        
+        </div>
+
+     
+      
+
+
+      
+    <!-- 
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="terminos" formControlName="terminos">
+          <label for="recordar" class="form-check-label" for="terminos">
+            Aceptar términos y condiciones
+          </label>
+        </div>
+    -->
+        
+        <hr class="mb-4">
+        <button type="submit" class="btn btn-primary btn-block" 
+        [disabled]="forma.invalid ">
+          Aceptar
+        </button>
+      
+      </form>
+    </div>
+  </div>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+        <script src=""></script></body>

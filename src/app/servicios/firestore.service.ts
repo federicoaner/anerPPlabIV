@@ -7,28 +7,28 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 })
 export class FirestoreService {
 
-  algoCollection:any;
+  productoCollectio:any;
 
-  algo:any;
+  producto:any;
 
 
   constructor(private firestore:AngularFirestore) {
 
-    this.algoCollection=this.firestore.collection('algo');
-    this.algo=this.algoCollection.valueChanges();
+    this.productoCollectio=this.firestore.collection('producto');
+    this.producto=this.productoCollectio.valueChanges();
    }
 
 
 
 
-   getAlgo(){
+   getProducto(){
 
-    return this.algo;
+    return this.producto;
    }
 
    agregarAlgo(object:any){
 
-    this.firestore.collection('algo').add(object);
+    this.firestore.collection('producto').add(object);
    }
 
 

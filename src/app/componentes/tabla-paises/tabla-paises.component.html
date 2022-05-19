@@ -1,0 +1,8 @@
+<ul class="list-group mb-3">
+    <li class="list-group-item d-flex justify-content-between lh-sm" *ngFor='let pais of paises'>
+        <div (click)="enviarNombrePais(pais.name)" >
+            <img [src]='pais.flag' alt="" height="35px" width="50px">
+            <p class='d-inline'>{{pais.name}}</p>
+        </div>
+    </li>
+</ul>
