@@ -14,14 +14,12 @@ import { LoggedGuard } from './guards/logged.guard';
 const routes: Routes = [
 
   {path: '', redirectTo: '/bienvenida', pathMatch: 'full'},
-  {path: 'login', component: LoginComponent},
+  
   {path:'bienvenida',component:BienvenidaComponent},
-  {path:'prueba',component:PruebaSubirComponent,canActivate:[AdminGuard]},
-  {path: 'alta', component: AltaAlgoComponent},
   {path:'bienvenida/alta-producto',component:AltaProductoComponent,canActivate:[LoggedGuard]},
   {path:'bienvenida/producto-detalle',component:ProductoDetalleComponent,canActivate:[LoggedGuard]},
   {path:'bienvenida/abm-container',component:AbmContainerComponent,canActivate:[AdminGuard]},
- 
+  {path: 'login', component: LoginComponent},
 
 
 

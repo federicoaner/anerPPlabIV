@@ -27,7 +27,7 @@
 
           <div class="">
             <label for="lastName">Marca</label>
-            <input type="text" class="form-control" id="marca" placeholder="" value="" required formControlName="marca">
+            <input type="text" class="form-control" id="marca" placeholder="" value="" required formControlName="marca" [(ngModel)]="this.containerDetalle.marca">
             <small class="invalid"
             *ngIf="forma.controls['marca'].errors?.['required'] && forma.controls['marca'].touched">El marca es requerido
             </small> 
@@ -35,7 +35,7 @@
 
           <div class="">
             <label for="lastName">capacidad</label>
-            <input type="text" class="form-control" id="capacidad" placeholder="" value="" required formControlName="capacidad">
+            <input type="text" class="form-control" id="capacidad" placeholder="" value="" required formControlName="capacidad" [(ngModel)]="this.containerDetalle.capacidad">
             <small class="invalid"
             *ngIf="forma.controls['capacidad'].errors?.['required'] && forma.controls['capacidad'].touched">El capacidad es requerido
             </small> 

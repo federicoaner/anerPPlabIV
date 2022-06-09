@@ -41,6 +41,7 @@ export class LoginComponent implements OnInit {
   
       this.auth.Login(this.email,this.password).then((response)=>{
         this.router.navigateByUrl('/bienvenida');
+        
 
       })
   
